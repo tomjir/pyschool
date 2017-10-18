@@ -1,6 +1,6 @@
 <!---
 
-	Copyright (c) 2009, 2016 Robert Bosch GmbH and its subsidiaries.
+	Copyright (c) 2009, 2017 Robert Bosch GmbH and its subsidiaries.
 	This program and the accompanying materials are made available under
 	the terms of the Bosch Internal Open Source License v4
 	which accompanies this distribution, and is available at
@@ -38,7 +38,7 @@ could also ask contributors to add themselves in this file on their own.
 
 ## <a name="license">License</a>
  
->	Copyright (c) 2009, 2016 Robert Bosch GmbH and its subsidiaries.
+>	Copyright (c) 2009, 2017 Robert Bosch GmbH and its subsidiaries.
 >	This program and the accompanying materials are made available under
 >	the terms of the Bosch Internal Open Source License v4
 >	which accompanies this distribution, and is available at
@@ -81,7 +81,7 @@ to get in contact with you or provide feedback.
 
 <!---
 
-	Copyright (c) 2009, 2016 Robert Bosch GmbH and its subsidiaries.
+	Copyright (c) 2009, 2017 Robert Bosch GmbH and its subsidiaries.
 	This program and the accompanying materials are made available under
 	the terms of the Bosch Internal Open Source License v4
 	which accompanies this distribution, and is available at
