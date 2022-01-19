@@ -1,91 +1,78 @@
-<!---
+# Python for managers | Challenge | 10-2021
 
-	Copyright (c) 2009, 2017 Robert Bosch GmbH and its subsidiaries.
-	This program and the accompanying materials are made available under
-	the terms of the Bosch Internal Open Source License v4
-	which accompanies this distribution, and is available at
-	http://bios.intranet.bosch.com/bioslv4.txt
+## Hello!  
 
--->
+Welcome to the git repository for the 2021 python for managers ``#p4m`` hackaton.  
+Here you can find all the necessary material for the ``#p4mchallenge``, which deals with outlier detection.  
 
-# Project Name
+This group was trained by Chabova Magdalena (Magdalena.Chabova@cz.bosch.com)
 
-* [About](#about)
-* [Maintainers](#maintainers)
-* [Contributors](#contributors)
-* [License](#license)
-* [How to use it](#use)
-* [How to build and test it](#build)
-* [How to contribute](#contribute)
-* [Used 3rd party Licenses](#licenses)
-* [Used encryption](#encryption)
-* [Feedback](#feedback)
+## Challenge Description: Quantity estimation by rail preassure
 
-## <a name="about">About</a>
+### Status
+You are a functional software engineer for FIE-systems.  
 
-Add a brief description about the contents of this repository here. Consider
-linking to existing documentation.
+To improve the quantity tolerance of the FIE your section manager asks you to develop a new software function that can estimate the injected quantity with an error smaller than 5% for quantities bigger than 180 mm³. As the function is deployed to the ECU/vehicle it has to be robust for all influence parameters.  
 
-## <a name="maintainers">Maintainers</a>
+Training and test data from a hydraulic testbench was measured by a colleague. The training data was already cleaned.  
 
-List the maintainers of this repository here. Consider linking to their 
-Bosch Connect profile pages. Mention or link to their email as a minimum.
+Currently, there is no solution for this task. Up to now, all classic approaches could not solve the problem.  
 
-## <a name="contributors">Contributors</a>
+### Your task
 
-Consider listing contributors in this section to give explicit credit. You 
-could also ask contributors to add themselves in this file on their own.
+Write a program that estimates the injected quantity with an accuracy of 5% under all conditions.
 
-## <a name="license">License</a>
- 
->	Copyright (c) 2009, 2017 Robert Bosch GmbH and its subsidiaries.
->	This program and the accompanying materials are made available under
->	the terms of the Bosch Internal Open Source License v4
->	which accompanies this distribution, and is available at
->	http://bios.intranet.bosch.com/bioslv4.txt
+### Remarks
 
-## <a name="use">How to use it</a>
+As classic approaches failed, a machine learning approach should be used. For robustness, outlier detection should be implemented.
 
-This section should contain information on how to use the content of this
-repository. If it contains SW, consider explaining how it is installed, run or
-integrated.
+### Steps to solve the task
 
-## <a name="build">How to build and test it</a>
+* Load the data
+* Analyze the data regarding values, range, distribution, plot histogram and time plot
+* Develop a plotting function to evaluate the relative error
+* Implement a machine learning task (e.g. NN) for regression using training data
+* Test the trained model with test data
+* The function is not robust: so implement an outlier detection to kick out the input values of the test vector that are not similar to the training values.
 
-If the repository contains SW, add instructions on how to build it from source
-and test it in this section.
+## Installation and Setup
 
-## <a name="contribute">How to contribute</a>
+1. Clone the repository via the Anaconda prompt. If you have never worked with GitLab before, please use the clone via HTTPS option:  
+```$ git clone https://code.exaas.bosch.com/p4m/challenges_08-2021/data-scientist-challenges/data-scientist-magdalena.git```  
 
-Use this section to describe or link to documentation which explaining how 
-users can make contributions to the contents of this repository. Consider 
-adopting the [BIOS way of facilitating contributions](http://bos.ch/ygF).
+2. Install all packages which are required for the challenge:
+* Change your current directory to the repository folder: ```(base) $ cd data-sciencist-magdalena```  
+* Create a virtual environment via Anaconda: ```(base) $ conda create -n p4m python=3.7.6 -y```
+* Activate the environment: ```(base) $ conda activate p4m```
+* Install the requirements via pip: ```(p4m) $ pip install -r requirements.txt```
 
-## <a name="licenses">Used 3rd party Licenses</a>
+Now you are ready to start hacking!  
 
-You must mention all 3rd party licenses (e.g. OSS) licenses used by your
-project here. Example:
+### Starting jupyter-lab  
 
-Software | License
-------------------
-[Apache Felix](http://felix.apache.org/) | [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.txt)
- 
-## <a name="encryption">Used encryption</a>
+Start the jupyter-lab programming environment via the anaconda promt. Please make sure the (p4m) environment is activated.  
+```(p4m) $ jupyter-lab```  
+This comand will open your browser. In there you find everything that you need. Open a new jupyter notebook or a python script.  
+Good luck with the challenge!
 
-Declaration of the usage of any encryption (see BIOS Repository Policy §4.a ).
+## Project Structure
 
-## <a name="feedback">Feedback</a>
+Before you start coding take a moment to make yourself familiar with the project structure:  
+``data/`` - Here you can find all relevant data which we will use to train our machine learning model.  
+``notebooks/`` - The place for your notebooks (the go-to document for data scientists - it can be used to code, documentation as well as deliverable results). Every file ending with .ipynb goes in here.  
+``scripts/`` - The place for raw python code, if you prefer not to use a notebook. Every file ending with .py belongs here.  
+``references/`` -If you find additional material which is useful for a better understanding of the project, you can put these files here.  
+``results/`` - Put your challenge results (e.g. result plots, trained models, ...) in here.  
+``.gitignore`` - Can be ignored for now.  
+``requirements.txt`` - File to setup and install all required python packages (See Installation and Setup).  
+``README.md`` - The file you are reading right now.  
 
-Consider using this section to describe how you would like other developers
-to get in contact with you or provide feedback.
+---
+### Known Bugs and Workarounds
+git clone via https:
 
-<!---
+Workaround for SSL errors:
+```$ git config --global http.sslVerify false```  
 
-	Copyright (c) 2009, 2017 Robert Bosch GmbH and its subsidiaries.
-	This program and the accompanying materials are made available under
-	the terms of the Bosch Internal Open Source License v4
-	which accompanies this distribution, and is available at
-	http://bios.intranet.bosch.com/bioslv4.txt
-
--->
-
+---
+Copyright of the challenge & data: Schmitt Joerg (Joerg.Schmitt2@de.bosch.com)  
