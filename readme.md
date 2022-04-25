@@ -1,11 +1,12 @@
-# Python for managers | Challenge | 10-2021
+# Python for managers | Challenge | 04-2022
 
 ## Hello!  
 
-Welcome to the git repository for the 2021 python for managers ``#p4m`` hackaton.  
+Welcome to the git repository for the 2022 python for managers ``#p4m`` hackaton.  
 Here you can find all the necessary material for the ``#p4mchallenge``, which deals with outlier detection.  
 
-This group was trained by Chabova Magdalena (Magdalena.Chabova@cz.bosch.com)
+Clasrooms were trained by Bubalova Kamila (Kamila.Bubalova@cz.bosch.com), Dvorak Jan (Jan.Dvorak@cz.bosch.com), Chabova Magdalena (Magdalena.Chabova@cz.bosch.com)
+Challenges were led by Dvorak Jan (Jan.Dvorak@cz.bosch.com), Chabova Magdalena (Magdalena.Chabova@cz.bosch.com), Vavrekova Nikola (Nikola.Vavrekova@bosch.com)
 
 ## Challenge Description: Quantity estimation by rail preassure
 
@@ -37,11 +38,10 @@ As classic approaches failed, a machine learning approach should be used. For ro
 
 ## Installation and Setup
 
-1. Clone the repository via the Anaconda prompt. If you have never worked with GitLab before, please use the clone via HTTPS option:  
-```$ git clone https://code.exaas.bosch.com/p4m/challenges_08-2021/data-scientist-challenges/data-scientist-magdalena.git```  
+1. Download .zip file with classroom and challenge assignment
 
 2. Install all packages which are required for the challenge:
-* Change your current directory to the repository folder: ```(base) $ cd data-sciencist-magdalena```  
+* Change your current directory to the repository folder: ```(base) $ cd <my-folder>```  
 * Create a virtual environment via Anaconda: ```(base) $ conda create -n p4m python=3.7.6 -y```
 * Activate the environment: ```(base) $ conda activate p4m```
 * Install the requirements via pip: ```(p4m) $ pip install -r requirements.txt```
